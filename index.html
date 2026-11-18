@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manar Altamimi | AI Engineer</title>
+  <meta name="description" content="Manar Altamimi is an AI Engineer specializing in retrieval-augmented generation (RAG), LLM agent workflows and backend services, built with Python, FastAPI and ASP.NET Core.">
+  <script>
+    /* Apply the saved theme (default: dark) before the page is drawn, so it never flashes */
+    try {
+      document.documentElement.dataset.theme = localStorage.getItem("theme") || "dark";
+    } catch (error) {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <noscript><style>#loader { display: none; } body.is-loading { overflow: auto; }</style></noscript>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body class="is-loading">
+
+  <!-- ===== Loading screen (hidden by js/main.js when the page is ready) ===== -->
+  <div id="loader" role="status" aria-live="polite">
+    <p class="loader__boot">&gt; booting portfolio.exe</p>
+    <div class="window loader__window">
+      <div class="window__bar"><i></i><i></i><i></i><span>loading.exe</span></div>
+      <div class="loader__body">
+        <img class="loader__char" src="images/watch-check.webp" alt="Pixel-art character checking her watch" width="130" height="182">
+        <div class="loader__info">
+          <p class="loader__title">LOADING...</p>
+          <div class="loader__track"><div class="loader__fill" id="loader-fill"></div></div>
+        </div>
+      </div>
+    </div>
+    <p class="loader__hint">// please wait, the pixels are warming up</p>
+    <p class="loader__name">MANAR ALTAMIMI</p>
+  </div>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <nav>
+      <a class="logo" href="#top"><img class="logo__icon" src="images/standing-idle.png" alt="" width="26" height="36">MANAR ALTAMIMI</a>
+      <div class="nav__right">
+        <ul>
+          <li><a href="#projects">/projects</a></li>
+          <li><a href="#experience">/experience</a></li>
+          <li><a href="#skills">/skills</a></li>
+          <li><a href="#about">/about</a></li>
+          <li><a href="#contact">/contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon-sun" viewBox="0 0 9 9" aria-hidden="true"><path d="M3 3h3v3H3zM4 0h1v2H4zM4 7h1v2H4zM0 4h2v1H0zM7 4h2v1H7zM1 1h1v1H1zM7 1h1v1H7zM1 7h1v1H1zM7 7h1v1H7z"/></svg>
+          <svg class="icon-moon" viewBox="0 0 9 9" aria-hidden="true"><path d="M3 0h4v1h-4zM2 1h3v1h-3zM1 2h3v1h-3zM1 3h3v1h-3zM1 4h3v1h-3zM1 5h3v1h-3zM2 6h3v1h-3zM3 7h5v1h-5zM4 8h3v1h-3z"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== Hero ===== -->
+    <div class="hero-stage">
+      <div class="wrap hero">
+        <div>
+          <p class="hero__prompt"><span id="typed"></span><span class="hero__cursor">_</span></p>
+          <h1>Hi, I’m <span class="hero__name">Manar Altamimi</span></h1>
+          <p class="hero__tagline">AI Engineer </p>
+          <p class="hero__pitch">
+            Computer Engineering graduate building AI-powered applications, agent workflows
+            and backend services. I apply retrieval-augmented generation, embeddings and LLM
+            integration to practical business problems through reliable, well-structured software.
+          </p>
+          <div class="hero__buttons">
+            <a class="btn btn--primary" href="#projects">See projects</a>
+            <a class="btn" href="Manar_Altamimi_CV.pdf" download>Download CV</a>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window__bar"><i></i><i></i><i></i><span>player_one.exe</span></div>
+          <div class="hero__sprite-wrap">
+            <span class="speech" aria-hidden="true">Hello!</span>
+            <div class="sprite sprite--smooth" role="img" aria-label="Pixel-art character waving hello"
+                 style="background-image: url('images/hero-wave.webp')"></div>
+          </div>
+          <div class="ground"></div>
+        </div>
+      </div>
+
+      <!-- A small character that runs across the screen -->
+      <div class="runner" aria-hidden="true">
+        <div class="runner__sprite" style="background-image: url('images/running.png')"></div>
+      </div>
+    </div>
+
+    <!-- ===== Skills marquee (content is repeated so the loop is seamless) ===== -->
+    <div class="marquee" aria-label="Key skills">
+      <div class="marquee__track">
+        <span>RAG</span>◆<span>LLM INTEGRATION</span>◆<span>LANGGRAPH</span>◆<span>FASTAPI</span>◆<span>ASP.NET CORE</span>◆<span>VECTOR SEARCH</span>◆<span>MCP</span>◆
+        <span>RAG</span>◆<span>LLM INTEGRATION</span>◆<span>LANGGRAPH</span>◆<span>FASTAPI</span>◆<span>ASP.NET CORE</span>◆<span>VECTOR SEARCH</span>◆<span>MCP</span>◆
+      </div>
+    </div>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>Projects</h2>
+            <p class="note">// selected projects. hover a window.</p>
+          </div>
+          <div class="sprite sprite--smooth guide" role="img" aria-label="Pixel-art character coding on her laptop"
+               style="background-image: url('images/projects-laptop.webp')"></div>
+        </div>
+
+        <div class="cards">
+
+          <!-- Project 1 (copy this whole <article> to add another project) -->
+          <article class="window card">
+            <div class="window__bar"><i></i><i></i><i></i><span>sellince.exe</span></div>
+            <div class="card__preview">customer profile <b>→</b> agent <b>→</b> personalized offer</div>
+            <div class="card__body">
+              <h3>Sellince: Proactive AI Sales Agent</h3>
+              <ul class="bullets">
+                <li>Contributed to a team-built proactive AI sales agent that recommends personalized telecom offers based on customer usage and profile information.</li>
+                <li>Built parts of the retrieval workflow using embeddings, vector search and product knowledge to support context-aware recommendations.</li>
+                <li>Worked on LangGraph-based agent workflows for customer understanding, offer recommendation and response generation.</li>
+              </ul>
+              <div class="tags">
+                <span>Python</span><span>FastAPI</span><span>LangGraph</span><span>Embeddings</span><span>Vector Search</span>
+              </div>
+              <a class="card__link" href="https://github.com/manartamimi1/Sellince-agent" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <!-- Project 2: graduation project -->
+          <article class="window card">
+            <div class="window__bar"><i></i><i></i><i></i><span>truthlens.exe</span></div>
+            <div class="card__preview">text or image <b>→</b> OCR <b>→</b> BERT <b>→</b> fake / real</div>
+            <div class="card__body">
+              <h3>TruthLens: Fake News Detection</h3>
+              <ul class="bullets">
+                <li>Graduation project: a web app that classifies news text as fake or real with a BERT model and shows a confidence score.</li>
+                <li>Added OCR so users can upload an image containing text and get the same prediction.</li>
+                <li>Built a Flask API for the model, with a simple HTML and CSS front end.</li>
+              </ul>
+              <div class="tags">
+                <span>Python</span><span>BERT</span><span>Transformers</span><span>Flask</span><span>OCR</span>
+              </div>
+              <a class="card__link" href="https://github.com/manartamimi1/Fake-News-Detection" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="window card">
+            <div class="window__bar"><i></i><i></i><i></i><span>simple_hr.exe</span></div>
+            <div class="card__preview">employee <b>→</b> manager <b>→</b> HR approval</div>
+            <div class="card__body">
+              <h3>SimpleHR: Workforce Management Platform</h3>
+              <ul class="bullets">
+                <li>Training project: an HR platform with smart attendance and multi-level leave approvals (Employee → Manager → HR) driven by Flowable BPMN workflows.</li>
+                <li>Includes an AI assistant for natural-language HR questions, role-based access control and an append-only audit log.</li>
+                <li>Built with .NET microservices and an Angular front end, orchestrated with Docker Compose.</li>
+              </ul>
+              <div class="tags">
+                <span>C#</span><span>.NET</span><span>Angular</span><span>Flowable BPMN</span><span>Docker</span>
+              </div>
+              <a class="card__link" href="https://github.com/manartamimi1/HR" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="window card">
+            <div class="window__bar"><i></i><i></i><i></i><span>traefik_setup.exe</span></div>
+            <div class="card__preview">browser <b>→</b> Traefik <b>→</b> API <b>→</b> PostgreSQL</div>
+            <div class="card__body">
+              <h3>Traefik Reverse Proxy with Docker Compose</h3>
+              <ul class="bullets">
+                <li>Set up Traefik as a reverse proxy in Docker Compose, with service discovery through Docker labels.</li>
+                <li>Routed a C# API container by hostname and connected it to a PostgreSQL 16 database with a persistent volume.</li>
+              </ul>
+              <div class="tags">
+                <span>Traefik</span><span>Docker Compose</span><span>PostgreSQL</span><span>C#</span>
+              </div>
+              <a class="card__link" href="https://github.com/manartamimi1/traefik" target="_blank" rel="noopener">View on GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section id="experience">
+      <div class="wrap">
+        <h2>Experience</h2>
+        <p class="note">// where i have been building.</p>
+
+        <div class="exp-list">
+
+          <article class="window exp">
+            <div class="window__bar"><i></i><i></i><i></i><span>orange_summer_challenge.log</span></div>
+            <div class="exp__body">
+              <div class="exp__meta">
+                <div>
+                  <h3>AI Engineer Trainee</h3>
+                  <div class="exp__org">Orange Summer Challenge</div>
+                </div>
+                <div class="exp__date">Aug 2026 – Nov 2026</div>
+              </div>
+              <ul class="bullets">
+                <li>Developed, with a team, an AI-powered solution that addresses lost sales opportunities and a weak connection to customer service.</li>
+                <li>Applied Python, AI agent concepts, embeddings and vector search as core building blocks of the solution.</li>
+              </ul>
+              <span class="badge">3RD PLACE · TEAM RESULT</span>
+            </div>
+          </article>
+
+          <article class="window exp">
+            <div class="window__bar"><i></i><i></i><i></i><span>ensera_ai.log</span></div>
+            <div class="exp__body">
+              <div class="exp__meta">
+                <div>
+                  <h3>Backend &amp; AI Engineering Trainee</h3>
+                  <div class="exp__org">Ensera.ai</div>
+                </div>
+                <div class="exp__date">Dec 2025 – Apr 2026</div>
+              </div>
+              <ul class="bullets">
+                <li>Built backend services and REST APIs with ASP.NET Core, Entity Framework Core and PostgreSQL to support application workflows.</li>
+                <li>Implemented RAG pipelines with embeddings, vector search and LLM integration, and worked with Model Context Protocol (MCP).</li>
+                <li>Used RabbitMQ, Docker Compose and Traefik, and explored Saga and Routing Slip patterns in distributed applications.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills">
+      <div class="wrap two-col">
+        <div>
+          <h2>Skills</h2>
+          <p class="note">// tools i work with.</p>
+
+          <div class="skill-group">
+            <h3>AI &amp; Machine Learning</h3>
+            <div class="tags">
+              <span>RAG</span><span>LLM Integration</span><span>Embeddings</span><span>Vector Search</span><span>LangGraph</span><span>MCP</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Programming &amp; Backend</h3>
+            <div class="tags">
+              <span>Python</span><span>FastAPI</span><span>C#</span><span>ASP.NET Core</span><span>REST APIs</span><span>Entity Framework Core</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h3>Data &amp; Engineering Tools</h3>
+            <div class="tags">
+              <span>PostgreSQL</span><span>SQL</span><span>Docker</span><span>Docker Compose</span><span>Traefik</span><span>RabbitMQ</span><span>Git</span><span>GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="sprite sprite--smooth" role="img" aria-label="Pixel-art character working at her computer"
+               style="background-image: url('images/working.webp')"></div>
+          <div class="ground"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about">
+      <div class="wrap two-col">
+        <div class="window player">
+          <div class="player__title">PLAYER 1</div>
+          <div class="sprite sprite--smooth" role="img" aria-label="Pixel-art character talking about herself"
+               style="background-image: url('images/about.gif')"></div>
+          <dl>
+            <dt>NAME</dt><dd>Manar Altamimi</dd>
+            <dt>CLASS</dt><dd>AI Engineer</dd>
+            <dt>BASE</dt><dd>Amman, Jordan</dd>
+            <dt>EDU</dt><dd>B.Sc. Computer Engineering, Hashemite University (2021–2025)</dd>
+            <dt>LANG</dt><dd>Arabic (native), English (B2)</dd>
+          </dl>
+        </div>
+
+        <div class="about">
+          <h2>About me</h2>
+          <p>
+            I am a Computer Engineering graduate from Hashemite University with hands-on experience
+            developing AI-powered applications, agent workflows and backend services. My work centers
+            on retrieval-augmented generation (RAG), embeddings, vector search and large language model
+            integration, using Python, FastAPI, C# and ASP.NET Core.
+          </p>
+          <p>I am interested in applying AI engineering to practical business problems through reliable, well-structured software. I have worked in team settings, including a third-place finish at the Orange Summer Challenge.</p>
+          <a class="btn" href="Manar_Altamimi_CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <div class="wrap two-col">
+        <div class="window window--mint">
+          <div class="window__bar"><i></i><i></i><i></i><span>terminal</span></div>
+          <div class="terminal__content">
+            <div class="terminal__cmd">$ ping manar</div>
+            <div>&gt; connection established</div>
+            <div>&gt; say hello: manaraltamimi106@gmail.com</div>
+            <div>&gt; call: +962 787 50 30 82</div>
+            <div class="terminal__links">
+              <a class="btn btn--primary" id="open-contact" href="mailto:manaraltamimi106@gmail.com?subject=Hello%20from%20your%20portfolio">Email me</a>
+              <a class="btn" href="https://github.com/manartamimi1" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/manar-altamimi-7a1321272/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Character at her desk, with emails flying out of the monitor -->
+        <div class="scene">
+          <span class="envelope envelope--1" aria-hidden="true"></span>
+          <span class="envelope envelope--2" aria-hidden="true"></span>
+          <span class="envelope envelope--3" aria-hidden="true"></span>
+          <div class="sprite scene__desk" role="img" aria-label="Pixel-art character typing an email at her desk"
+               style="background-image: url('images/desk.png')"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Contact form (opens from the "Email me" button, sends to your inbox) ===== -->
+  <dialog id="contact-dialog" class="window contact-dialog" aria-labelledby="contact-title">
+    <div class="window__bar">
+      <i></i><i></i><i></i><span>new_message.exe</span>
+      <button class="dialog-close" id="close-contact" type="button" aria-label="Close">✕</button>
+    </div>
+
+    <form id="contact-form" class="contact-form" action="https://formsubmit.co/manaraltamimi106@gmail.com" method="POST">
+      <h3 id="contact-title">Send me a message</h3>
+
+      <label>Your name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Your email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>Message
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+
+      <!-- Settings for the form service, and a hidden spam trap -->
+      <input type="hidden" name="_subject" value="New message from your portfolio">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off">
+
+      <button class="btn btn--primary" type="submit">Send message</button>
+      <p class="contact-form__status" id="contact-status" role="status"></p>
+      <p class="contact-form__direct">Or write to me directly: <a href="mailto:manaraltamimi106@gmail.com">manaraltamimi106@gmail.com</a></p>
+    </form>
+  </dialog>
+
+  <!-- ===== Footer ===== -->
+  <footer>© <span id="year">2026</span> Manar Altamimi</footer>
+
+</body>
+</html>
