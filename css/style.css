@@ -502,9 +502,11 @@ nav ul a:hover {
 }
 
 .hero__tagline {
+  min-height: 1.5em; /* keeps the layout steady while the title is being deleted */
   margin-bottom: 14px;
   font-family: var(--font-mono);
-  font-size: 19px;
+  font-size: 26px;
+  color: var(--heading);
 }
 
 .hero__pitch {

@@ -6,6 +6,7 @@
    4. Footer year
    5. Contact form ("Email me")
    6. Light / dark theme
+   7. Rotating job title
    ========================================================================== */
 
 
@@ -54,7 +55,7 @@ function hideLoader() {
 
 
 /* 2. Typing effect for the greeting (edit the text here) */
-const greeting = "> AI engineer, online";
+const greeting = "> hello, world";
 const typedElement = document.getElementById("typed");
 let letterIndex = 0;
 
@@ -68,6 +69,7 @@ function typeNextLetter() {
 
 function startTyping() {
   typeNextLetter();
+  startRoles();
 }
 
 
@@ -187,6 +189,56 @@ themeToggle.addEventListener("click", () => {
     /* Private browsing: the theme just won't be remembered */
   }
 });
+
+
+/* 7. Rotating job title (the line under "Hi, I'm Manar Altamimi")
+   It types a title, waits, deletes it, then types the next one. */
+const roles = ["AI Engineer", "Software Engineer"]; // add or change job titles here
+const ROLE_TYPE_SPEED = 90;   // milliseconds per letter when typing
+const ROLE_DELETE_SPEED = 50; // milliseconds per letter when deleting
+const ROLE_HOLD_TIME = 2000;  // how long each title stays on screen
+
+const roleElement = document.getElementById("role");
+
+function startRoles() {
+  if (prefersReducedMotion || roles.length < 2) return; // keep the first title still
+
+  let roleIndex = 0;
+  let letterCount = roles[0].length; // the first title is already on screen
+  let deleting = false;
+
+  function step() {
+    const role = roles[roleIndex];
+
+    if (deleting) {
+      letterCount--;
+      roleElement.textContent = role.slice(0, letterCount);
+
+      if (letterCount === 0) {
+        deleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(step, 300);
+      } else {
+        setTimeout(step, ROLE_DELETE_SPEED);
+      }
+    } else {
+      letterCount++;
+      roleElement.textContent = role.slice(0, letterCount);
+
+      if (letterCount === role.length) {
+        deleting = true;
+        setTimeout(step, ROLE_HOLD_TIME);
+      } else {
+        setTimeout(step, ROLE_TYPE_SPEED);
+      }
+    }
+  }
+
+  setTimeout(() => {
+    deleting = true;
+    step();
+  }, ROLE_HOLD_TIME);
+}
 
 
 /* Start: show the loading screen first, then reveal the page */
